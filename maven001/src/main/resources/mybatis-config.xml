@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+     <!-- 配置类型别名 -->
+     <typeAliases>
+      <package name="com.grade.entity"/> 
+     </typeAliases>
+
+    <!-- 指定义连接数据的配置 -->
+<!-- 	<environments default="development">
+		<environment id="development">
+		<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+			<property name="driver" value="com.mysql.jdbc.Driver"/>
+			<property name="url" value="jdbc:mysql://localhost:3306/dt72"/>
+			<property name="username" value="root"/>
+			<property name="password" value="123"/>
+			</dataSource>
+		</environment>
+	</environments> -->
+<!-- 
+	<plugins>
+	    com.github.pagehelper为PageHelper类所在包名
+	    <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+   </plugins> -->
+	
+	<!-- 加载sql映射文件 -->
+	<mappers>
+		<mapper resource="com/grade/mapper/GradeMapper.xml"/>
+		<mapper resource="com/grade/mapper/StudentsMapper.xml"/>
+	</mappers>
+</configuration>
